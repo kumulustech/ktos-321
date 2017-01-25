@@ -12,7 +12,7 @@ Before we can do much of anything we need to have the command line tools install
 pip install python-openstackclient
 ```
 
-We also need to have a set of credentials set up in order to help map to the openstack environment:
+We also need to have a set of credentials set up in order to help map to the OpenStack environment:
 
 ```
 cat > ~/openrc.sh << EOF
@@ -52,7 +52,7 @@ Copy and paste the above into the command line on your "ALL-IN-ONE" instance, an
 source openrc.sh
 ```
 
-the catalog service is of most use to the other parts of openstack, but we can manipulate it with the openstack client if need be. In our case, we'll just print it:
+the catalog service is of most use to the other parts of OpenStack, but we can manipulate it with the openstack client if need be. In our case, we'll just print it:
 
 ```
 openstack endpoint list
