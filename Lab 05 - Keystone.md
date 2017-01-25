@@ -52,7 +52,7 @@ Copy and paste the above into the command line on your "ALL-IN-ONE" instance, an
 source openrc.sh
 ```
 
-the catalog service is of most use to the other parts of OpenStack, but we can manipulate it with the openstack client if need be. In our case, we'll just print it:
+The catalog service is of most use to the other parts of OpenStack, but we can manipulate it with the openstack client if need be. In our case, we'll just print it:
 
 ```
 openstack endpoint list
