@@ -31,12 +31,12 @@ parameters:
   image:
     type: string
     label: Image Name
-    default: xenial
+    default: ubuntu
     description: Image to be used for compute instance
   instance_type:
     type: string
     label: Instance Type
-    default: m1.small
+    default: m1.large
     description: Type of instance (flavor) to be used
   network:
     type: string
@@ -120,9 +120,9 @@ resources:
   #     port_id: { get_resource: server_1_port }
 
 outputs:
-  server_floating_ip:
+  floating_ip:
     description: The Floating IP address of the deployed server
-    value: { get_attr: [floating_ip_id, floating_ip_address] }
+    value: { get_attr: [server_1_floating_ip, floating_ip_address] }
   server_info:
     description: values of server
     value: { get_attr: [cloud_tools, show]}
@@ -147,7 +147,7 @@ Assuming the instance launches appropriately, investigate the current state as d
 We have two options:
 
 ```
-heat create
+heat stack create
 ```
 
 or
