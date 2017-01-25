@@ -6,7 +6,6 @@ The networking functionality can really be broken down into a few key aspects:
 3) L3 based security
 
 There are a number of additional service functions that we will not necessarily have time to review in the lab:
-- gbp, Group Based Policy as a service connectivity model
 - lbaas, Load Balancing service, although an extra credit is to try to deploy this
 - fwaas, vpnaas
 

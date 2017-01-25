@@ -7,11 +7,9 @@ For Cinder, we will have to enable additional servcies and re-build our openstac
 
 ```
 echo 'enable_cinder: "yes"' >> /etc/kolla/globals.yml
-echo 'enable_swift: "yes"' >> /etc/kolla/globals.yml
-echo 'enable_manila: "yes"' >> /etc/kolla/globals.yml
 
-for n in `docker ps -qa`; do docker stop $n ; docker rm $n; done
-kolla-ansible deploy
+kolla-ansible destroy -i multinode --yes-i-really-really-mean-it
+kolla-ansible deploy -i multinode
 ```
 
 Once that's done, we can start creating Volumes, though it's possible you did this via the earlier Nova extra Credit.
