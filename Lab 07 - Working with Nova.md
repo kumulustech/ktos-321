@@ -12,7 +12,7 @@ openstack server
 In order to deploy an instance, there are some common operations one might do such as determine what the current state of the server environment is, so:
 - List the currently running instances
 - Create a new VM
-  - What information is needed?   image name, flavor {scale of instance}, ssh key name, network to connect to (there's currently normally only one, so this isn't required by default)
+  - What information is needed? image name, flavor {scale of instance}, ssh key name, network to connect to (there's currently normally only one, so this isn't required by default)
   - default "with image" create an ephemeral disk
   - create an image on volume
 
@@ -30,12 +30,14 @@ While we have only a single instance, we can still see how the scheduler treats 
 openstack server
 ```
 
-- boot instance (ephemeral), log in and create a file on the file System
- e.g: cat > original.txt <<EOF
+- boot instance (ephemeral), log in and create a file on the file system.
+ Example template: 
+ ```
+ cat > original.txt <<EOF
  this is a file
  and it is here
  EOF
-
+```
 - snapshot instance
 - restart instance (if necessary)
 - log in and remove file created
@@ -75,7 +77,7 @@ In order to look at one of the other common operations, create another private n
 - If the scheduler isn't "saying" much, enable debugging (from the container review)
 
 ### Extra Extra Credit
-- rebuild your enviornment to enable cinder:
+- rebuild your environment to enable cinder:
   - on the openstack system VM:  ```echo 'enable_cinder: "yes"' > /etc/kolla/globals.yml``` and then delete and re-build the openstck enviornment:
 
 ```

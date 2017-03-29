@@ -47,7 +47,7 @@ what's different about the commands available via the glance command?
   - what happens to the on disk repository? (remember where that is?)
 
 ### Extra Credit
-- launch a vm with the image you deployed
+- launch a VM with the image you deployed
 - log in and "touch" a file on the disk
 - create a snapshot of your running image (nova command line or Horizon)
 - save the image to disk (how big is it compared to when you first uploaded it?)
