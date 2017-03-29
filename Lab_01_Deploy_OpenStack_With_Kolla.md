@@ -131,13 +131,13 @@ And again, we can install via Horizon [Project->Images=>Create Image], or via CL
 ```
 source /root/open.rc
 curl -o cirros-0.3.4-x86_64-disk.img http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img
-openstack image create --container-format bare --disk-format raw --min-disk 1 --min-ram 512 --public --file cirros-0.3.4-x86_64-disk.img cirros
+openstack image create --container-format bare --disk-format raw --min-disk 1 --min-ram 256 --public --file cirros-0.3.4-x86_64-disk.img cirros
 rm cirros-0.3.4-x86_64-disk.img
 
 curl -o ubuntu-xenial.img \
 https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img
-openstack image create --container-formant bare --disk-format qcow2 \
---min-disk 1 --min-ram 512--public --file \
+openstack image create --container-format bare --disk-format qcow2 \
+--min-disk 1 --min-ram 512 --public --file \
 ubuntu-xenial.img xenial
 rm ubuntu-xenial.img
 ```
