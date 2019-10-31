@@ -1,6 +1,6 @@
 # Docker use Basics
 
-We have two choices for using Docker int he lab enviornment(s):
+We have two choices for using Docker in the lab environment(s):
 
 1) Use our control or node-1 machine, which already have docker installed
 2) Use the "native" Docker service from Docker.com:
